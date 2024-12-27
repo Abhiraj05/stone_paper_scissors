@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="flex justify-center items-center min-h-screen  bg-gray-700  ">
+    <div class="capitalize  text-center  md:border-white md:max-w-max md:p-10  ">
+        <div class="flex justify-center items-center text-center gap-y-2 gap-x-14">
+            <div class="text-center">
+                <div id="user-v" class="text-center  border-white border-2 rounded-md p-1 border-dashed  bg-blue-400 "
+                    hidden>
+
+                    <p class="font-bold text-white uppercase text-base flex justify-center items-center"> <img
+                            class="w-9 h-9" src="images/userpng.png" alt="">user</p>
+                </div>
+                <img src="images/stone.png" id="picone" class="w-12 h-28 rotate-90 ml-2 md:w-24 md:h-44 md:mr-10" alt=""
+                    hidden>
+                <img src="images/paper.png" id="pictwo" class="w-12 h-28 rotate-90 ml-2 md:w-24 md:h-44 md:mr-10" alt=""
+                    hidden>
+                <img src="images/scissors.png" id="picthree" class="w-12 h-28 rotate-90 ml-2 md:w-24 md:h-44 md:mr-10"
+                    alt="" hidden>
+                <div class="text-center">
+                    <p id="userip" class="font-semibold  text-yellow-400 text-xl md:text-2xl"></p>
+                </div>
+            </div>
+            <div>
+                <h1 id="vs-text" class="text-white font-medium font-base uppercase md:text-2xl" hidden>vs</h1>
+            </div>
+            <div class="text-center">
+                <div id="comp-v" class="text-center border-white border-2 rounded-md p-1  border-dashed   bg-blue-400 "
+                    hidden>
+                    <p class="font-bold  text-white uppercase text-base flex justify-center items-center"><img
+                            class="w-9 h-9" src="images/userpng.png" alt="">comp</p>
+                </div>
+                <img src="images/stone.png" id="revpicone"
+                    class="w-12 h-28 rotate-[-90deg] ml-8 md:w-24 md:h-44 md:ml-10" alt="" hidden>
+                <img src="images/paper.png" id="revpictwo"
+                    class="w-12 h-28 rotate-[-90deg] ml-8 md:w-24 md:h-44 md:ml-10" alt="" hidden>
+                <img src="images/scissors.png" id="revpicthree"
+                    class="w-12 h-28 rotate-[-90deg] ml-8 md:w-24 md:h-44 md:ml-10" alt="" hidden>
+                <div class="text-center">
+                    <p id="computerip" class="font-semibold  text-yellow-400 text-xl md:text-2xl"></p>
+                </div>
+            </div>
+        </div>
+        <div id="headline" class="text-white text-7xl font-extrabold   md:text-8xl font-bebas tracking-widest">
+            <p>stone paper</p>
+            <p>scissors</p>
+            <p>game</p>
+        </div>
+        <p id="result-text" class="text-white font-bold capitalize text-4xl mt-6 mb-6 md:text-5xl"></p>
+        <div id="btns" hidden>
+            <div class="text-center flex justify-center items-center">
+                <button class="bg-yellow-400 p-4  m-3 rounded-xl border-2 text-center border-white  hover:bg-yellow-500"
+                    id="stone"><img class="w-12 h-16 md:w-16 md:h-20" src="images/pixelcut-export (3).png" alt="">
+                    <p class="text-white capitalize font-semibold text-base md:text-lg">stone</p>
+                </button>
+                <button class="bg-yellow-400 p-4 m-3 rounded-xl border-2 text-center  border-white  hover:bg-yellow-500"
+                    id="paper"><img class="w-12 h-16  md:w-16 md:h-20" src="images/pixelcut-export (4).png" alt="">
+                    <p class="text-white capitalize font-semibold text-base md:text-lg">paper</p>
+                </button>
+                <button class="bg-yellow-400 p-4 m-3 rounded-xl border-2 text-center  border-white  hover:bg-yellow-500"
+                    id="scissors"><img class="w-12 h-16  md:w-16 md:h-20" src="images/pixelcut-export (5).png" alt="">
+                    <p class="text-white capitalize font-semibold text-base md:text-lg">scissor</p>
+                </button>
+            </div>
+        </div>
+        <div class="text-center  mt-9 ">
+            <button
+                class="bg-red-400 text-white pt-2 pb-2 pr-5 pl-5 rounded-md capitalize border-2  border-white font-semibold text-lg hover:bg-red-500 md:text-2xl"
+                id="newgame">start</button>
+            <a class="bg-red-400 text-white p-4 rounded-md capitalize border-2  border-white font-semibold text-lg hover:bg-red-500 md:text-xl"
+                id="restartgame" href="index.html" class="" hidden>new game</a>
+            <p id="tip-text-one" class=" text-white capitalize text-base mt-8">note: Click on "start" to start a game.
+            </p>
+            <p id="tip-text-two" class=" text-white capitalize text-base mt-8" hidden>note: Click on "new game" to start
+                a game.</p>
+            <p id="tip-text-three" class=" text-white capitalize text-base mt-8" hidden>note: select any one option</p>
+        </div>
+        <p id="credit" class=" text-white capitalize text-base mt-20">made with &#10084 by abhiraj</p>
+        <div id="spinner" hidden>
+            <div class="fixed inset-0  bg-gray-700 bg-opacity-80 flex justify-center items-center">
+                <div class="h-16 w-16 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
