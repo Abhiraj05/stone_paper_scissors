@@ -65,7 +65,7 @@ scissors.addEventListener("click", function () {
     tiptextthree.hidden = true
     vs_text.hidden = false
     restart_game.hidden = false
-
+    btns.hidden = true
 
 })
 
@@ -106,7 +106,7 @@ paper.addEventListener("click", function () {
     tiptextthree.hidden = true
     vs_text.hidden = false
     restart_game.hidden = false
-    
+    btns.hidden = true
 })
 
 // stone button
@@ -146,7 +146,7 @@ stone.addEventListener("click", function () {
     tiptextthree.hidden = true
     vs_text.hidden = false
     restart_game.hidden = false
-
+    btns.hidden = true
 
 
 })
