@@ -93,7 +93,7 @@ paper.addEventListener("click", function () {
             revpicthree.hidden = true
         }
         if (text == "Paper" && options[computer] == "Scissors") {
-            result_text.innerHTML = "you lost won &#128557 !"
+            result_text.innerHTML = "you lost &#128557 !"
             revpicone.hidden = true
             revpictwo.hidden = true
             revpicthree.hidden = false
