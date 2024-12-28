@@ -46,21 +46,24 @@ scissors.addEventListener("click", function () {
             revpicone.hidden = true
             revpictwo.hidden = false
             revpicthree.hidden = true
+            flag = 0
         }
         if (text == "Scissors" && options[computer] == "Scissors") {
             result_text.innerHTML = "Tie &#128540 !"
             revpicone.hidden = true
             revpictwo.hidden = true
             revpicthree.hidden = false
+            flag = 0
         }
         if (text == "Scissors" && options[computer] == "Stone") {
             result_text.innerHTML = "you lost &#128557 !"
             revpicone.hidden = false
             revpictwo.hidden = true
             revpicthree.hidden = true
+            flag = 0
         }
     }
-    flag = 0
+    // flag = 0
     tiptexttwo.hidden = false
     tiptextthree.hidden = true
     vs_text.hidden = false
@@ -90,21 +93,24 @@ paper.addEventListener("click", function () {
             revpicone.hidden = false
             revpictwo.hidden = true
             revpicthree.hidden = true
+            flag = 0
         }
         if (text == "Paper" && options[computer] == "Paper") {
             result_text.innerHTML = "Tie &#128540 !"
             revpicone.hidden = true
             revpictwo.hidden = false
             revpicthree.hidden = true
+            flag = 0
         }
         if (text == "Paper" && options[computer] == "Scissors") {
             result_text.innerHTML = "you lost &#128557 !"
             revpicone.hidden = true
             revpictwo.hidden = true
             revpicthree.hidden = false
+            flag = 0
         }
     }
-    flag = 0
+    // flag = 0
     tiptexttwo.hidden = false
     tiptextthree.hidden = true
     vs_text.hidden = false
@@ -134,21 +140,24 @@ stone.addEventListener("click", function () {
             revpicone.hidden = true
             revpictwo.hidden = true
             revpicthree.hidden = false
+            flag = 0
         }
         if (text == "Stone" && options[computer] == "Stone") {
             result_text.innerHTML = "Tie &#128540 !"
             revpicone.hidden = false
             revpictwo.hidden = true
             revpicthree.hidden = true
+            flag = 0
         }
         if (text == "Stone" && options[computer] == "Paper") {
             result_text.innerHTML = "you lost &#128557 !"
             revpicone.hidden = true
             revpictwo.hidden = false
             revpicthree.hidden = true
+            flag = 0
         }
     }
-    flag = 0
+    // flag = 0
     tiptexttwo.hidden = false
     tiptextthree.hidden = true
     vs_text.hidden = false
@@ -162,9 +171,9 @@ stone.addEventListener("click", function () {
 
 // game restart button
 restart_game.addEventListener("click", function () {
-    // if (flag == 0) {
+    if (flag == 0) {
         flag = 1
-    // }
+    }
     restart_game.hidden = true
     spinner.hidden = false
     setTimeout(() => {
