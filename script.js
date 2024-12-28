@@ -162,6 +162,9 @@ stone.addEventListener("click", function () {
 
 // game restart button
 restart_game.addEventListener("click", function () {
+    // if (flag == 0) {
+        flag = 1
+    // }
     restart_game.hidden = true
     spinner.hidden = false
     setTimeout(() => {
@@ -183,9 +186,6 @@ restart_game.addEventListener("click", function () {
         result_text.hidden=true
 
     }, 1000);
-    if (flag == 0) {
-        flag = 1
-    }
 })
 
 // new game button
