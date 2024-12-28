@@ -1,6 +1,6 @@
 // variables 
 let computer, user, restart_game, headline, user_v, comp_v, btns, new_game, tiptextone, tiptexttwo, tiptextthree, credit, vs_text, spinner
-, stone, paper, scissors, userip, computerip, result_text, flag = 1, picone, pictwo, picthree, revpicone, revpictwo, revpicthree
+    , stone, paper, scissors, userip, computerip, result_text, flag = 1, picone, pictwo, picthree, revpicone, revpictwo, revpicthree
 stone = document.getElementById("stone")
 paper = document.getElementById("paper")
 scissors = document.getElementById("scissors")
@@ -66,7 +66,10 @@ scissors.addEventListener("click", function () {
     vs_text.hidden = false
     restart_game.hidden = false
     btns.hidden = true
-
+    result_text.hidden=false
+    userip.hidden=false
+    computerip.hidden=false
+    
 })
 
 // paper button
@@ -107,6 +110,10 @@ paper.addEventListener("click", function () {
     vs_text.hidden = false
     restart_game.hidden = false
     btns.hidden = true
+    result_text.hidden=false
+    userip.hidden=false
+    computerip.hidden=false
+
 })
 
 // stone button
@@ -147,7 +154,9 @@ stone.addEventListener("click", function () {
     vs_text.hidden = false
     restart_game.hidden = false
     btns.hidden = true
-
+    result_text.hidden=false
+    userip.hidden=false
+    computerip.hidden=false
 
 })
 
@@ -156,11 +165,24 @@ restart_game.addEventListener("click", function () {
     restart_game.hidden = true
     spinner.hidden = false
     setTimeout(() => {
-        scissors.hidden = false
-        stone.hidden = false
-        paper.hidden = false
         spinner.hidden = true
-    }, 3000);
+        btns.hidden = false
+        user_v.hidden = true
+        comp_v.hidden = true
+        revpicone.hidden = true
+        revpictwo.hidden = true
+        revpicthree.hidden = true
+        picone.hidden = true
+        pictwo.hidden = true
+        picthree.hidden = true
+        vs_text.hidden = true
+        tiptextthree.hidden=false
+        tiptexttwo.hidden=true
+        userip.hidden=true
+        computerip.hidden=true
+        result_text.hidden=true
+
+    }, 1000);
     if (flag == 0) {
         flag = 1
     }
@@ -178,5 +200,5 @@ new_game.addEventListener("click", function () {
         tiptextone.hidden = true
         headline.hidden = true
         credit.hidden = true
-    }, 800);
+    }, 1000);
 })
