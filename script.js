@@ -174,7 +174,6 @@ restart_game.addEventListener("click", function () {
     if (flag == 0) {
         flag = 1
     }
-    restart_game.hidden = true
     spinner.hidden = false
     setTimeout(() => {
         spinner.hidden = true
@@ -193,6 +192,8 @@ restart_game.addEventListener("click", function () {
         userip.hidden=true
         computerip.hidden=true
         result_text.hidden=true
+        restart_game.hidden = true
+
 
     }, 1000);
 })
