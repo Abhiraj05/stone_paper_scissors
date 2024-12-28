@@ -1,6 +1,6 @@
 // variables 
 let computer, user, restart_game, headline, user_v, comp_v, btns, new_game, tiptextone, tiptexttwo, tiptextthree, credit, vs_text, spinner
-    , stone, paper, scissors, userip, computerip, result_text, flag = 1, picone, pictwo, picthree, revpicone, revpictwo, revpicthree
+    , stone, paper, scissors, userip, computerip, result_text, flag = 1, picone, pictwo, picthree, revpicone, revpictwo, revpicthree,text
 stone = document.getElementById("stone")
 paper = document.getElementById("paper")
 scissors = document.getElementById("scissors")
@@ -38,7 +38,7 @@ scissors.addEventListener("click", function () {
         pictwo.hidden = true
         picthree.hidden = false
         computer = Math.floor(Math.random() * 3)
-        let text = "Scissors"
+        text = "Scissors"
         userip.innerHTML = text
         computerip.innerHTML = `${options[computer]}`
         if (text == "Scissors" && options[computer] == "Paper") {
@@ -85,7 +85,7 @@ paper.addEventListener("click", function () {
         pictwo.hidden = false
         picthree.hidden = true
         computer = Math.floor(Math.random() * 3)
-        let text = "Paper"
+        text = "Paper"
         userip.innerHTML = text
         computerip.innerHTML = `${options[computer]}`
         if (text == "Paper" && options[computer] == "Stone") {
@@ -132,7 +132,7 @@ stone.addEventListener("click", function () {
         pictwo.hidden = true
         picthree.hidden = true
         computer = Math.floor(Math.random() * 3)
-        let text = "Stone"
+        text = "Stone"
         userip.innerHTML = text
         computerip.innerHTML = `${options[computer]}`
         if (text == "Stone" && options[computer] == "Scissors") {
